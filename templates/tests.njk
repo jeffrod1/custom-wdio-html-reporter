@@ -6,7 +6,8 @@
                 <table class="table table-test">
                     <tr class="test-header">
                         <td colspan="2" class="{{ testStateColour(testInfo) }}">
-                            <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span>
+                            {# <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span> #}
+                            {% if testInfo.events | length  %} <span class="test-expand glyphicon glyphicon-chevron-up">&nbsp;</span> {% endif %}
                             <span class="{{ testStateClass(testInfo) }}">{{ testStateIcon(testInfo) |safe}}</span>
                             <span class="test-title">{{testInfo.title}}</span>
                         </td>
